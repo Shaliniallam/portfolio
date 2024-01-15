@@ -308,11 +308,12 @@ body {
 .skills__container {
   display: flex;
   justify-content: center;
+  padding: 20px; /* Adjust padding for better spacing on small screens */
 }
 
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for the pyramid effect */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
   grid-gap: 20px; /* Adjust the gap between skills */
   text-align: center;
 }
@@ -340,6 +341,13 @@ body {
 
 .skills__name {
   font-size: 1rem;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
 }
 
 
